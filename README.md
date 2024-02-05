@@ -111,60 +111,85 @@ Access Your Application: If using Minikube, use ```minikube service myapp-servic
 1- Cluster Management
 
 ```kubectl cluster-info``` Display cluster info.
+
 ```kubectl get nodes``` List all nodes in the cluster.
+
 ```kubectl config view``` Show current context.
+
 ```kubectl config use-context <context-name>``` Switch between contexts (clusters).
 
 2- Working with Applications & Managing Deployments
 
 ```kubectl create -f <deployment.yaml>``` Create a deployment using a YAML file.
+
 ```kubectl get deployments``` List all deployments.
+
 ```kubectl rollout status deployment/<deployment-name>``` Get the rollout status of a deployment.
+
 ```kubectl set image deployment/<deployment-name> <container-name>=<new-image>``` Update the deployment with a new image.
+
 ```kubectl rollout undo deployment/<deployment-name>``` Roll back to the previous deployment.
 
 3- Working with Pods
 
 ```kubectl get pods``` List all pods.
+
 ```kubectl describe pod <pod-name>``` Get detailed information about a pod.
+
 ```kubectl logs <pod-name>``` View logs for a specific pod.
+
 ```kubectl exec -it <pod-name> -- /bin/bash``` Execute an interactive bash shell in the specified pod.
 
 4- Managing Services
 
 ```kubectl get services``` List all services in the namespace.
+
 ```kubectl expose deployment <deployment-name> --type=LoadBalancer --name=<service-name>``` Expose your deployment as a service.
+
 ```kubectl delete service <service-name>``` Delete a service.
 
 5- Configurations & Secrets
 
 ```kubectl create configmap <configmap-name> --from-file=<path-to-file>``` Create a ConfigMap from a file.
+
 ```kubectl create secret generic <secret-name> --from-literal=key=value``` Create a secret from a literal value.
 
 6- PV
 
 ```kubectl get pv``` List all Persistent Volumes.
+
 ```kubectl get pvc``` List all Persistent Volume Claims.
 
 7-Debugging
 
 ```kubectl describe pods <pod-name>``` Show detailed information about a pod, useful for debugging.
+
 ```kubectl get pods --all-namespaces``` List all pods in all namespaces, useful for getting an overview of what’s running.
+
 ```kubectl logs <pod-name>``` Fetch logs of a pod.
+
 ```kubectl exec -it <pod-name> -- <command>``` Execute a command in a container.
 
 8- Advanced Ops -Scaling, labeling, namespaces-
 
 ```kubectl get namespaces``` List all Kubernetes namespaces.
+
 ```kubectl create namespace <namespace-name>``` Create a new namespace.
+
 ```kubectl label pods <pod-name> <label-key>=<label-value>``` Add a new label to a pod.
+
 ```kubectl annotate pods <pod-name> <annotation-key>=<annotation-value>``` Add a new annotation to a pod.
+
 ```kubectl scale deployment <deployment-name> --replicas=<num-replicas>``` Scale a deployment to the specified number of replicas.
+
 ```kubectl autoscale deployment <deployment-name> --min=<min-pods> --max=<max-pods> --cpu-percent=<target-CPU-utilization>``` Automatically scale the number of pods in a deployment.
 
 9- Resource Management
 
 ```kubectl apply -f <file.yaml>``` Apply a configuration to a resource from a file.
+
 ```kubectl delete -f <file.yaml>``` Delete resources defined in a YAML file.
+
 ```kubectl describe quota``` Show detailed information about applied quotas.
+
 ```kubectl describe limitrange``` Show detailed information about applied limit ranges.
