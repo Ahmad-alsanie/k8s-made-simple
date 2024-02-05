@@ -1,0 +1,11 @@
+spec:
+  containers:
+  - name: webapp-container
+    image: webapp:latest
+    volumeMounts:
+    - name: config-volume
+      mountPath: /etc/config
+  volumes:
+  - name: config-volume
+    configMap:
+      name: webapp-config
