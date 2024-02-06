@@ -193,3 +193,5 @@ Access Your Application: If using Minikube, use ```minikube service myapp-servic
 ```kubectl describe quota``` Show detailed information about applied quotas.
 
 ```kubectl describe limitrange``` Show detailed information about applied limit ranges.
+
+P.s. Happy Coding!
