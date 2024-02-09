@@ -194,4 +194,9 @@ Access Your Application: If using Minikube, use ```minikube service myapp-servic
 
 ```kubectl describe limitrange``` Show detailed information about applied limit ranges.
 
-P.s. Happy Coding!
+## Contributing
+
+Contributions are welcome! If you have improvements or additions, please submit a pull request or open an issue.
+
+-------------------------------------------------------------
+Happy coding!
