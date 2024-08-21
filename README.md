@@ -198,8 +198,6 @@ Access Your Application: If using Minikube, use ```minikube service myapp-servic
 
 Contributions are welcome! If you have improvements or additions, please submit a pull request or open an issue.
 
--------------------------------------------------------------
-Happy coding! 
  
  
  
